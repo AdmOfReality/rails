@@ -8,11 +8,12 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+Answer.destroy_all
 Question.destroy_all
 Test.destroy_all
 User.destroy_all
 Category.destroy_all
-Answer.destroy_all
+
 
 users = User.create!([
   {name: 'AOR'},
@@ -21,25 +22,25 @@ users = User.create!([
 ])
 
 categories = Category.create!([
-  {title: 'Пивасик'},
-  {title: 'Винишко'},
-  {title: 'Вискарик'}
+  {title: 'Backend'},
+  {title: 'SQL'},
+  {title: 'Full stack'}
 ])
 
 tests = Test.create!([
-  {level: 1, title: 'Козел тёмное!', category_id: categories[0].id},
-  {level: 2, title: 'Красненькое домашнее', category_id: categories[1].id},
-  {level: 3, title: 'Вискарик чистым со льдом', category_id: categories[2].id}
+  {level: 1, title: 'Ruby', category_id: categories[0].id, user_id: users[0].id},
+  {level: 2, title: 'SQL beginner', category_id: categories[1].id, user_id: users[1].id},
+  {level: 3, title: 'Ruby rails', category_id: categories[2].id, user_id: users[2].id}
 ])
 
 questions = Question.create!([
-  {body: 'Напиток пенный, витаминный, офигенный?', test_id: tests[0].id},
-  {body: 'И с женою можно хлопнуть, и в компании друзей?',  test_id: tests[1].id},
-  {body: 'Посидеть, смотря на огонь и потягивать неспеша?', test_id: tests[2].id}
+  {body: 'Ruby интерпертируемый язык?', test_id: tests[0].id},
+  {body: 'SQL имеет 4 основных действия?',  test_id: tests[1].id},
+  {body: 'Ruby rails Выносить мозг как пушка?', test_id: tests[2].id}
 ])
 
 answers = Answer.create!([
-  {body: tests[0].title},
-  {body: tests[1].title},
-  {body: tests[2].title}
+  {body: 'Yes!', question_id: questions[0].id},
+  {body: 'Yes!', question_id: questions[1].id},
+  {body: 'Yes!', question_id: questions[2].id}
 ])
