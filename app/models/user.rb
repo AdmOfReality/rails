@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_one :payment_account
+  has_many :tests
   has_many :tests_users
   has_many :tests, through: :tests_users
 
@@ -7,3 +7,4 @@ class User < ApplicationRecord
     Test.joins("INNER JOIN users on (tests.owner_id = users.id)").where(tests: {level: level})
   end
 end
+
