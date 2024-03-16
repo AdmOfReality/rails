@@ -28,19 +28,19 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  {level: 1, title: 'Ruby', category_id: categories[0].id, user_id: users[0].id},
-  {level: 2, title: 'SQL beginner', category_id: categories[1].id, user_id: users[1].id},
-  {level: 3, title: 'Ruby rails', category_id: categories[2].id, user_id: users[2].id}
+  {level: 1, title: 'Ruby', category_id: categories[0], owner_id: users[0]},
+  {level: 2, title: 'SQL beginner', category_id: categories[1], owner_id: users[1]},
+  {level: 3, title: 'Ruby rails', category_id: categories[2], owner_id: users[2]}
 ])
 
 questions = Question.create!([
-  {body: 'Ruby интерпертируемый язык?', test_id: tests[0].id},
-  {body: 'SQL имеет 4 основных действия?',  test_id: tests[1].id},
-  {body: 'Ruby rails Выносить мозг как пушка?', test_id: tests[2].id}
+  {body: 'Ruby интерпертируемый язык?', test_id: tests[0]},
+  {body: 'SQL имеет 4 основных действия?',  test_id: tests[1]},
+  {body: 'Ruby rails Выносить мозг как пушка?', test_id: tests[2]}
 ])
 
 answers = Answer.create!([
-  {body: 'Yes!', question_id: questions[0].id},
-  {body: 'Yes!', question_id: questions[1].id},
-  {body: 'Yes!', question_id: questions[2].id}
+  {body: 'Yes!', question_id: questions[0]},
+  {body: 'Yes!', question_id: questions[1]},
+  {body: 'Yes!', question_id: questions[2]}
 ])
