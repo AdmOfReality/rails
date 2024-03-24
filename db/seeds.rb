@@ -4,8 +4,8 @@
 #
 # Example:
 #
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
+#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_email|
+#     MovieGenre.find_or_create_by!(email: genre_email)
 #   end
 
 
@@ -14,6 +14,7 @@ Category.destroy_all
 Test.destroy_all
 Answer.destroy_all
 Question.destroy_all
+TestsUser.destroy_all
 
 categories = Category.create!([
   {title: 'Backend'},
@@ -22,9 +23,9 @@ categories = Category.create!([
 ])
 
 users = User.create!([
-  {name: 'AOR'},
-  {name: 'SkiNy'},
-  {name: 'Kaun'}
+  {email: 'AOR@gmail.com'},
+  {email: 'SkiNy@gmail.com'},
+  {email: 'Kaun@gmail.com'}
 ])
 
 tests = Test.create!([
@@ -43,7 +44,10 @@ questions = Question.create!([
 ])
 
 answers = Answer.create!([
-  {body: 'Yes!', question_id: questions[0].id},
+  {body: 'Answer for the first question : Yes!', correct: false, question_id: questions[0].id},
+  {body: 'Answer for the first question : Yes!', correct: false, question_id: questions[0].id},
+  {body: 'Answer for the first question : Yes!', correct: false, question_id: questions[0].id},
+  {body: 'Answer for the first question : Yes!', question_id: questions[0].id},
   {body: 'Yes!', question_id: questions[1].id},
   {body: 'Yes!', question_id: questions[2].id}
 ])

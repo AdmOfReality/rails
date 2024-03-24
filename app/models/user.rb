@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   scope :by_level, -> (level) { joins(:my_test).where(tests: {level: level}) }
 
+  validates :email, presence: true
+
   def show_list_tests_by_level(level)
     my_test.where(level: level).pluck(:title)
   end

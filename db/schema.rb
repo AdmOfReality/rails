@@ -39,7 +39,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_16_134608) do
 
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "level", default: 1
+    t.integer "level", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_id", null: false
@@ -56,7 +56,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_16_134608) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
