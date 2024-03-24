@@ -28,9 +28,12 @@ users = User.create!([
 ])
 
 tests = Test.create!([
-  {level: 1, title: 'SQL beginner', category_id: categories[1].id, owner_id: users[0].id},
+  {level: 0, title: 'SQL beginner', category_id: categories[1].id, owner_id: users[0].id},
+  {level: 1, title: 'MSSQL', category_id: categories[1].id, owner_id: users[0].id},
+  {level: 1, title: 'Postgresql', category_id: categories[1].id, owner_id: users[0].id},
   {level: 3, title: 'Ruby', category_id: categories[0].id, owner_id: users[1].id},
-  {level: 8, title: 'Ruby rails', category_id: categories[2].id, owner_id: users[2].id}
+  {level: 4, title: '1C', category_id: categories[2].id, owner_id: users[2].id},
+  {level: 8, title: 'Ruby rails', category_id: categories[2].id, owner_id: users[1].id}
 ])
 
 questions = Question.create!([
