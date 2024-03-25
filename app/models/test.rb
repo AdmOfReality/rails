@@ -5,8 +5,20 @@ class Test < ApplicationRecord
   has_many :tests_users
   has_many :users, through: :tests_users
 
-  def self.sort_desc_test_name_by_category(title)
-    Test.joins("INNER JOIN categories ON tests.category_id = categories.id").where(categories: {title: title}).order(title: :desc).pluck(:title)
+  scope :easy, -> {where(level: 0..1)}
+  scope :middle, -> {where(level: 2..4)}
+  scope :hard, -> {where(level: 5..Float::INFINITY)}
+
+  scope :by_category, -> (title) {
+    joins(:category).where(categories: { title: title }).order(title: :asc)
+  }
+
+  validates :title, presence: true
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0}
+  validates :title, uniqueness: { scope: :level, message: "Only uniq title for each level" }
+
+  def self.get_category(title)
+    by_category(title).pluck(:title)
   end
 end
 
