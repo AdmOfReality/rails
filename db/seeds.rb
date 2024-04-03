@@ -38,12 +38,12 @@ tests = Test.create!([
 ])
 
 questions = Question.create!([
-  {body: 'Ruby интерпертируемый язык?', test_id: tests[0].id},
-  {body: 'SQL имеет 4 основных действия?',  test_id: tests[1].id},
-  {body: 'Ruby rails Выносить мозг как пушка?', test_id: tests[2].id}
+  {body: 'Ruby интерпертируемый язык?', test_id: tests[3].id},
+  {body: 'SQL имеет 4 основных действия?',  test_id: tests[0].id},
+  {body: 'Ruby rails Выносить мозг как пушка?', test_id: tests[5].id}
 ])
 
-answers = Answer.create!([
+Answer.create!([
   {body: 'Answer for the first question : Yes!', correct: false, question_id: questions[0].id},
   {body: 'Answer for the first question : Yes!', correct: false, question_id: questions[0].id},
   {body: 'Answer for the first question : Yes!', correct: false, question_id: questions[0].id},
