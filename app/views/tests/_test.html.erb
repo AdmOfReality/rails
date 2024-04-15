@@ -9,4 +9,5 @@
 		<%= button_to 'Delete', test_path(test), :method => :delete,
 		data: { turbo_confirm: 'Are you sure O_o ???'} %>
 	</td>
+	<td><%= test.questions.count %></td>
 </tr>
