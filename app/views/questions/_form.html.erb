@@ -1,0 +1,14 @@
+<%= form_with model: [@test, @question], local: true do |form| %>
+ 
+ <%= render 'shared/errors', resource: @question %> 
+ 
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_field :body %>
+  </p>
+
+  <p><%= form.submit %></p>
+
+<% end %>
+
+<p><%= button_to 'Back', test_path(@question.test.id), :method => :get %></p>

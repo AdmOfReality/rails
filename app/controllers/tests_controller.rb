@@ -10,8 +10,7 @@ class TestsController < ApplicationController
     @test = Test.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @test = Test.new(test_params)
@@ -35,8 +34,7 @@ class TestsController < ApplicationController
     redirect_to tests_path
   end
 
-  def show
-  end
+  def show; end
 
   private
 
