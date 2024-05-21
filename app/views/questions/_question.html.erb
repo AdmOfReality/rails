@@ -5,6 +5,7 @@
 	</tr>
 	<tr align="center">
 		<td><%= question.body %></td>
+		<td><%= button_to 'Show', question_path(question), :method => :get %></td>
 		<td><%= button_to 'New', new_test_question_path(@test), :method => :get %></td>
 		<td><%= button_to 'Edit', edit_question_path(question), :method => :get %></td>
 		<td><%= button_to 'Delete', question_path(question), :method => :delete,

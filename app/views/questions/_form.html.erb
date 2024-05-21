@@ -1,4 +1,4 @@
-<%= form_with model: [@test, @question], local: true do |form| %>
+<%= form_with model: [@test, @question] do |form| %>
  
  <%= render 'shared/errors', resource: @question %> 
  
@@ -11,4 +11,4 @@
 
 <% end %>
 
-<p><%= button_to 'Back', test_path(@question.test.id), :method => :get %></p>
+<p><%= button_to 'Back', test_path(@question.test), :method => :get %></p>

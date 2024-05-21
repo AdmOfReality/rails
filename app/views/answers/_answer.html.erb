@@ -1,0 +1,7 @@
+<li><p>
+	<%= answer.body %><br>
+	<%= button_to 'Show', answer_path(answer), :method => :get %>
+    <%= button_to 'Edit', edit_answer_path(answer), :method => :get %>
+    <%= button_to 'Delete', answer_path(answer), :method => :delete,
+    		data: { turbo_confirm: 'Are you sure O_o ???'} %> </p>
+</li>

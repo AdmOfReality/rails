@@ -7,6 +7,8 @@ class Answer < ApplicationRecord
 
   validate :validate_count_of_answers, on: :create
 
+  private
+
   def validate_count_of_answers
     errors.add(:base, "max answers is 4") if question.answers.count >= 4
   end

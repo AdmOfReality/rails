@@ -2,6 +2,9 @@ source "https://rubygems.org"
 
 ruby "3.2.2"
 
+#Using scss files
+gem "sassc-rails"
+
 # Moving to postgresql
 gem "pg", "~> 1.4.5"
 

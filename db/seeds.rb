@@ -12,9 +12,8 @@
 User.destroy_all
 Category.destroy_all
 Test.destroy_all
-Answer.destroy_all
 Question.destroy_all
-TestsUser.destroy_all
+
 
 categories = Category.create!([
   {title: 'Backend'},
@@ -38,20 +37,5 @@ tests = Test.create!([
 ])
 
 questions = Question.create!([
-  {body: 'Ruby интерпертируемый язык?', test_id: tests[3].id},
-  {body: 'SQL имеет 4 основных действия?',  test_id: tests[0].id},
-  {body: 'Ruby rails Выносить мозг как пушка?', test_id: tests[5].id}
-])
-
-Answer.create!([
-  {body: 'Answer for the first question : Yes!', correct: false, question_id: questions[0].id},
-  {body: 'Answer for the first question : Yes!', correct: false, question_id: questions[0].id},
-  {body: 'Answer for the first question : Yes!', correct: false, question_id: questions[0].id},
-  {body: 'Answer for the first question : Yes!', question_id: questions[0].id},
-  {body: 'Yes!', question_id: questions[1].id},
-  {body: 'Yes!', question_id: questions[2].id}
-])
-
-TestsUser.create!([
-  { test_id: tests[0].id, user_id: users[0].id }
+  {body: 'Кто создал Ruby on rails', test_id: tests[3].id}
 ])
