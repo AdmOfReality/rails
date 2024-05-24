@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :my_tests, class_name: 'Test', foreign_key: :owner_id, inverse_of: :owner
-  has_many :test_passages
+  has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
 
   scope :by_level, -> (level) { joins(:my_test).where(tests: {level: level}) }
