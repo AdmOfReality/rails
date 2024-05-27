@@ -1,0 +1,243 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Tes",
+				"TestsUser"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/aor/main/rails/app/views/test_passages/show.html.erb",
+		"/Users/aor/main/rails/app/views/tests/_test.html.erb",
+		"/Users/aor/main/rails/app/models/question.rb",
+		"/Users/aor/main/rails/app/models/test_passage.rb",
+		"/Users/aor/main/rails/app/controllers/test_passages_controller.rb",
+		"/Users/aor/main/rails/config/routes.rb",
+		"/Users/aor/main/rails/app/views/tests/index.html.erb",
+		"/Users/aor/main/rails/app/models/user.rb",
+		"/Users/aor/main/rails/app/controllers/tests_controller.rb",
+		"/Users/aor/main/rails/app/models/test.rb",
+		"/Users/aor/main/rails/db/migrate/20240422053721_create_test_passages.rb",
+		"/Users/aor/main/rails/db/seeds.rb",
+		"/Users/aor/main/rails/db/migrate/20240422110529_drop_table_tests_users.rb",
+		"/Users/aor/main/rails/app/models/answer.rb",
+		"/Users/aor/main/rails/app/controllers/answers_controller.rb",
+		"/Users/aor/main/rails/Gemfile",
+		"/Users/aor/main/rails/app/views/answers/new.html.erb",
+		"/Users/aor/main/rails/app/views/answers/edit.html.erb",
+		"/Users/aor/main/rails/app/views/answers/_form.html.erb",
+		"/Users/aor/main/rails/app/views/answers/show.html.erb",
+		"/Users/aor/main/rails/app/assets/stylesheets/application.css",
+		"/Users/aor/main/rails/app/assets/stylesheets/styles.css",
+		"/Users/aor/main/rails/app/assets/stylesheets/scaffolds.scss",
+		"/Users/aor/main/rails/app/views/answers/_answer.html.erb",
+		"/Users/aor/main/rails/app/controllers/questions_controller.rb",
+		"/Users/aor/main/rails/app/views/questions/_form.html.erb",
+		"/Users/aor/main/rails/app/views/questions/show.html.erb",
+		"/Users/aor/main/rails/app/views/questions/_question.html.erb",
+		"/Users/aor/main/rails/app/views/questions/new.html.erb",
+		"/Users/aor/main/rails/app/views/answers/_answer.hmtl.erb",
+		"/Users/aor/main/rails/app/views/questions/index.html.erb",
+		"/Users/aor/main/rails/app/helpers/author_helper.rb",
+		"/Users/aor/main/rails/app/helpers/footer_helper.rb",
+		"/Users/aor/main/rails/app/views/layouts/application.html.erb",
+		"/Users/aor/main/rails/app/helpers/time_helper.rb",
+		"/Users/aor/main/rails/app/views/tests/_form.html.erb",
+		"/Users/aor/main/rails/app/views/shared/_footer.html.erb",
+		"/Users/aor/main/rails/app/views/questions/edit.html.erb",
+		"/Users/aor/main/rails/app/helpers/questions_helper.rb",
+		"/Users/aor/main/rails/app/views/tests/show.html.erb",
+		"/Users/aor/main/rails/app/views/tests/new.html.erb",
+		"/Users/aor/main/rails/app/views/tests/edit.html.erb",
+		"/Users/aor/main/rails/app/views/shared/_errors.html.erb",
+		"/Users/aor/main/rails/app/helpers/tests_helper.rb",
+		"/Users/aor/main/rails/app/views/tests/style.css",
+		"/Users/aor/main/rails/files/index.html.slim",
+		"/Users/aor/main/rails/app/views/tests/tests.html.erb",
+		"/Users/aor/main/rails/files/index.html.erb",
+		"/Users/aor/main/rails/config/database.yml",
+		"/Users/aor/main/rails/public/about.html",
+		"/Users/aor/main/rails/public/hello.html",
+		"/Users/aor/main/rails/app/controllers/tests_controller2.rb",
+		"/Users/aor/main/rails/app/models/category.rb",
+		"/Users/aor/main/rails/db/migrate/20240206120211_add_users_name_null_constraint.rb",
+		"/Users/aor/main/rails/db/migrate/20240206112113_create_users.rb",
+		"/Users/aor/main/rails/db/migrate/20240207100840_change_column_default.rb",
+		"/Users/aor/main/rails/db/schema.rb",
+		"/Users/aor/main/rails/config/application.rb",
+		"/Users/aor/Documents/rb_files/test_git/test/app.rb"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"scss",
+			"button_to"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"link_to"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 39.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "config.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"seed",
+				"db/seeds.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 319.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
