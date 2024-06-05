@@ -1,11 +1,16 @@
 class ApplicationController < ActionController::Base
 
+  def index
+    render file: "#{Rails.root}/public/about.html"
+  end
+
   helper_method :current_user,
                 :logged_in?
 
   private
 
   def authenticate_user!
+    cookies[:before_log_in_url] = request.fullpath
     unless current_user
       redirect_to login_path, alert: 'Не вижу легитимности в твоем пребывании здесь, авторизуйся! =/'
     end

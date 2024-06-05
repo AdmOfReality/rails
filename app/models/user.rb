@@ -8,6 +8,10 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  validates :email, presence: true,
+                    uniqueness: { case_sensitive: false },
+                    format: { with: URI::MailTo::EMAIL_REGEXP, message: "must be a valid email address" }
+
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test.id)
   end
