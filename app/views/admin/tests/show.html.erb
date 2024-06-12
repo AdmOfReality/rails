@@ -9,11 +9,12 @@
 	<tr align="center">
 		<td><%= @test.title %></td>
 		<td><%= @test.level %></td>
-		<td><%= button_to 'Edit', edit_test_path(@test), :method => :get %></td>
-		<td><%= button_to 'Back', tests_path, :method => :get %></td>
+		<td><%= button_to 'Edit', edit_admin_test_path(@test), :method => :get %></td>
+		<td><%= button_to 'Back', admin_tests_path, :method => :get %></td>
 </table>
 
-<h1><strong>Вопросы к тесту</strong></h1>
-<%= render @test.questions %>
-<br>
 
+<h1><strong>Вопросы к тесту</strong></h1>
+<ol>
+<%= render partial: 'questions/question', collection: @test.questions %>
+</ol>
