@@ -7,11 +7,11 @@
 
 <h2>Answers</h2>
 
-<%= button_to 'New answer', new_question_answer_path(@question), :method => :get %>
+<%= button_to 'New answer', new_admin_question_answer_path(@question), :method => :get %>
 
 <ol>
 	<%= render @question.answers %>
 </ol>
 
-<%= button_to 'Edit', edit_question_path(@question), :method => :get %>
+<%= button_to 'Edit', edit_admin_question_path(@question), :method => :get %>
 <%= button_to 'Back', admin_test_path(@question.test), :method => :get %>

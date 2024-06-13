@@ -1,6 +1,6 @@
 class Admin::TestsController < Admin::BaseController
 
-  before_action :find_test, only: %i[ show destroy update edit start ]
+  before_action :find_test, only: %i[ show destroy update edit ]
 
   def index
     @tests = Test.all
@@ -13,9 +13,9 @@ class Admin::TestsController < Admin::BaseController
   def edit; end
 
   def create
-    @test = Test.new(test_params)
+    @test = current_user.my_tests.new(test_params)
     if @test.save
-      redirect_to admin_test_path
+      redirect_to admin_test_path(@test)
     else
       render :new, status: :unprocessable_entity
     end
@@ -36,11 +36,6 @@ class Admin::TestsController < Admin::BaseController
 
   def show; end
 
-  def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
-  end
-
   private
 
   def find_test
@@ -48,7 +43,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id, :owner_id)
+    params.require(:test).permit(:title, :level, :category_id)
   end
 
 end
