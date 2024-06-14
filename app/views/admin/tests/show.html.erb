@@ -1,0 +1,20 @@
+<h1><strong>Тест</strong></h1>
+
+<table border="11">
+	<tr align="center">
+		<th><strong>Title:</strong></th>
+		<th><strong>Level:</strong></th>
+		<th colspan='2'><strong>Actions</strong></th>
+	</tr>
+	<tr align="center">
+		<td><%= @test.title %></td>
+		<td><%= @test.level %></td>
+		<td><%= button_to 'Edit', edit_admin_test_path(@test), :method => :get %></td>
+		<td><%= button_to 'Back', admin_tests_path, :method => :get %></td>
+</table>
+
+
+<h1><strong>Вопросы к тесту</strong></h1>
+<ol>
+<%= render partial: 'questions/question', collection: @test.questions %>
+</ol>

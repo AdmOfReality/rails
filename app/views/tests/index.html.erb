@@ -1,17 +1,13 @@
  <h1>Тееееест, тееест, тест!</h1>
 
- <p>
- 	<%= button_to 'New test', new_test_path, :method => :get %>
- </p>
-
 <table border="44">
 	<tr align="center">
 		<th>Title</th>
 		<th>Level</th>
 		<th>Category</th>
 		<th>Owner</th>
-		<th colspan='4'>Actions</th>
 		<th>Count of questions</th>
+		<th>Actions</th>
 	</tr>
 
 	<%= render @tests %>
