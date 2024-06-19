@@ -1,4 +1,4 @@
-<h1>Прохождение теста по <%= @test_passage.test.title %> завершено!</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <% if @test_passage.successful? %>
   <p>Отлично! Ваш рейтинг составил <span class="green"><%= @test_passage.success_rate.to_i %></span> процентов!</p>

@@ -74,3 +74,6 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+
+# Localization
+gem "rails-i18n", "~> 7.0"
