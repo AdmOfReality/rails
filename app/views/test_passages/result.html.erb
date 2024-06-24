@@ -1,11 +1,11 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <% if @test_passage.successful? %>
-  <p>Отлично! Ваш рейтинг составил <span class="green"><%= @test_passage.success_rate.to_i %></span> процентов!</p>
+  <p><%= t('.success') %> <span class="green"><%= t('.score', score: @test_passage.success_rate.to_i) %></span> %!</p>
 <% else %>
-  <p>Нужно повторить материал =( Ваш рейтинг составил <span class="red"><%= @test_passage.success_rate.to_i %></span> процентов!</p>
+  <p><%= t('.fail') %> <span class="red"><%= t('.score', score: @test_passage.success_rate.to_i) %></span> %!</p>
 <% end %>
 
 <p>
-  <%= link_to "Back to All Tests", tests_path %>
+  <%= link_to t('global_buttons.all_tests'), tests_path %>
 </p>

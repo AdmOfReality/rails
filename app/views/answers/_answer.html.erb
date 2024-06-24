@@ -1,7 +1,7 @@
 <li><p>
 	<%= answer.body %><br>
-	<%= button_to 'Show', answer_path(answer), :method => :get %>
-    <%= button_to 'Edit', edit_answer_path(answer), :method => :get %>
-    <%= button_to 'Delete', answer_path(answer), :method => :delete,
-    		data: { turbo_confirm: 'Are you sure O_o ???'} %> </p>
+	<%= button_to t('global_buttons.show'), answer_path(answer), :method => :get %>
+    <%= button_to t('global_buttons.edit'), edit_answer_path(answer), :method => :get %>
+    <%= button_to t('global_buttons.delete'), answer_path(answer), :method => :delete,
+    		data: { turbo_confirm: t('global_buttons.warning')} %> </p>
 </li>

@@ -2,10 +2,23 @@ en:
   activerecord:
     models:
       test: "Test"
+      user: 'User'
+      admin: 'Admin'
+      question: 'Question'
+      answer: 'Answer'
 
     attributes:
       test:
-        title: "Title"
+        title: 'Title'
+        category: 'Category'
+      user:
+        first_name: 'First name'
+        last_name: 'Last name'
+      question:
+        body: 'Body'
+      answer:
+        body: 'Body'
+        correct: 'Correct'
 
     errors:
       messages:

@@ -4,5 +4,5 @@
 	<td><%= test.category.title %></td>
 	<td><%= test.owner.email %></td>
 	<td><%= test.questions.count %></td>
-	<td><%= button_to 'Start', start_test_path(test) %></td>
+	<td><%= button_to t('global_buttons.start'), start_test_path(test) %></td>
 </tr>

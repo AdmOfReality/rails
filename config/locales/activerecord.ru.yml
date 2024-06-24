@@ -2,10 +2,23 @@ ru:
   activerecord:
     models:
       test: "Тест"
+      user: 'Пользователь'
+      admin: 'Администратор'
+      question: 'Вопрос'
+      answer: 'Ответ' 
 
     attributes:
       test:
-        title: "Название"
+        title: 'Название'
+        category: 'Категория'
+      user:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+      question:
+        body: 'Тело вопроса'
+      answer:
+        body: 'Тело ответа'
+        correct: 'Правильный'
 
     errors:
       messages:

@@ -11,12 +11,35 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+    select:
+      prompt: "Please select"
 
   shared:
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    header:
+      welcome: "Welcome"
+
+  devise:
+    registrations:
+      new:
+        header: 'Become a Pro'
+        length: 'characters minimum'
+    sessions:
+      new:
+        header: 'Enter the knowlege Gates'
+    confirmations:
+      new:
+        header: 'Resend confirmation instructions'
+    shared:
+      links:
+        login: 'Login'
+        signup: 'Sign up'
+        forgot_password: 'Forgot your password?'
+        confirmation_instruction: "Didn't receive confirmation instructions?"
+        unlock_instruction: "Didn't receive unlock instructions?"
 
   tests:
     index:
@@ -25,14 +48,54 @@ en:
   test_passages:
     result:
       header: "The %{title} test was successfully complete!"
+      success: "Great! Your score is"
+      score: "%{score}"
+      fail: "You need to review the material =( Your rating is"
+    show:
+      header: "Passing the test: %{title}"
+      question: "Question %{number} from %{size}"
 
   admin:
+    nav:
+      header: "Admin's panel"
+      welcome: "Welcome"
     tests:
       create:
         success: "Test successfully created"
       index:
         header: "Available Tests"
-
+        title: 'Title'
+        level: 'Level'
+        category: 'Category'
+        questions: 'Count of questions'
+        actions: 'Actions'
+        owner: 'Owner'
+      edit:
+        header: 'Edit %{title}'
+      new:
+        header: "Create new test" 
+      show:
+        questions: 'Test questions'
+    answers:
+      edit:
+        header: 'Edit answer'
+      new:
+        header: 'New answer'
+      show:
+        header: 'Question'
   test_mailer:
     completed_test:
       subject: "You just completed the test!"
+
+  global_buttons:
+    logout: 'Logout'
+    back: 'Back'
+    new: 'New test'
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    warning: "Are you sure?"
+    signup: "Sign up"
+    enter: "Enter"
+    all_tests: "Back to all tests"
+    next: 'Next'
