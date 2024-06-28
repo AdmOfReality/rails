@@ -1,31 +1,101 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+    select:
+      prompt: "Please select"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    header:
+      welcome: "Welcome"
+
+  devise:
+    registrations:
+      new:
+        header: 'Become a Pro'
+        length: 'characters minimum'
+    sessions:
+      new:
+        header: 'Enter the knowlege Gates'
+    confirmations:
+      new:
+        header: 'Resend confirmation instructions'
+    shared:
+      links:
+        login: 'Login'
+        signup: 'Sign up'
+        forgot_password: 'Forgot your password?'
+        confirmation_instruction: "Didn't receive confirmation instructions?"
+        unlock_instruction: "Didn't receive unlock instructions?"
+
+  tests:
+    index:
+      header: "Available Tests"
+
+  test_passages:
+    result:
+      header: "The %{title} test was successfully complete!"
+      success: "Great! Your score is"
+      score: "%{score}"
+      fail: "You need to review the material =( Your rating is"
+    show:
+      header: "Passing the test: %{title}"
+      question: "Question %{number} from %{size}"
+
+  admin:
+    nav:
+      header: "Admin's panel"
+      welcome: "Welcome"
+    tests:
+      create:
+        success: "Test successfully created"
+      index:
+        header: "Available Tests"
+        title: 'Title'
+        level: 'Level'
+        category: 'Category'
+        questions: 'Count of questions'
+        actions: 'Actions'
+        owner: 'Owner'
+      edit:
+        header: 'Edit %{title}'
+      new:
+        header: "Create new test" 
+      show:
+        questions: 'Test questions'
+    answers:
+      edit:
+        header: 'Edit answer'
+      new:
+        header: 'New answer'
+      show:
+        header: 'Question'
+  test_mailer:
+    completed_test:
+      subject: "You just completed the test!"
+
+  global_buttons:
+    logout: 'Logout'
+    back: 'Back'
+    new: 'New test'
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    warning: "Are you sure?"
+    signup: "Sign up"
+    enter: "Enter"
+    all_tests: "Back to all tests"
+    next: 'Next'

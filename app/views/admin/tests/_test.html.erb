@@ -4,11 +4,11 @@
 	<td><%= test.category.title %></td>
 	<td><%= test.owner.email %></td>
 	<td><%= test.questions.count %></td>
-	<td><%= button_to 'Show', admin_test_path(test), :method => :get %></td>
-	<td><%= button_to 'Edit', edit_admin_test_path(test), :method => :get %></td>
+	<td><%= button_to t('global_buttons.show'), admin_test_path(test), :method => :get %></td>
+	<td><%= button_to t('global_buttons.edit'), edit_admin_test_path(test), :method => :get %></td>
 	<td>
-		<%= button_to 'Delete', admin_test_path(test),
+		<%= button_to t('global_buttons.delete'), admin_test_path(test),
 								:method => :delete,
-								data: {turbo_confirm: 'Are you sure O_o ???'} %>
+								data: {turbo_confirm: t('global_buttons.warning')} %>
 	</td>
 </tr>

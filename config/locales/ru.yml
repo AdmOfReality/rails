@@ -1,0 +1,121 @@
+ru:
+  hello: "Привет мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+    select:
+      prompt: "Пожалуйста выберите"
+
+  shared:
+    errors:
+      header:
+        one: "Обнаружена %{count} ошибка"
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        other: "Обнаружено %{count} ошибки"
+    header:
+      welcome: "Добро пожаловать"
+
+
+  devise:
+    registrations:
+      new:
+        header: 'Станьте профессионалом'
+        length: 'символов минимум'
+      
+    sessions:
+      new:
+        header: 'Войдите в чертоги знаний'
+    confirmations:
+      new:
+        header: 'Повторный запрос на подтверждение'
+    shared:
+      links:
+        login: 'Авторизация'
+        signup: 'Регистрация'
+        forgot_password: 'Забыли свой пароль?'
+        confirmation_instruction: 'Не получили инструкцию для подтверждения аккаунта?'
+        unlock_instruction: 'Не получили инструкцию для разблокировки аккаунта?'
+
+
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: 'Название'
+      level: 'Уровень'
+      category: 'Категория'
+      questions: 'Всего вопросов'
+      actions: 'Действия'
+      owner: 'Владелец'
+  
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершён!"
+      success: "Отлично! Ваш рейтинг составил"
+      score: "%{score}"
+      fail: "Нужно повторить материал =( Ваш рейтинг составил"
+    show:
+      header: "Прохождение теста: %{title}"
+      question: "Вопрос %{number} из %{size}"
+
+
+  admin:
+    nav:
+      header: "Административная панель"
+      welcome: "Добро пожаловать"
+    tests:
+      create:
+        success: "Тест успешно создан"
+      index:
+        header: "Доступные Тесты"
+        title: 'Название'
+        level: 'Уровень'
+        category: 'Категория'
+        questions: 'Всего вопросов'
+        actions: 'Действия'
+        owner: 'Владелец'
+      edit:
+        header: 'Редактировать %{title}'
+      new:
+        header: "Создать новый тест" 
+      show:
+        questions: 'Вопросы к тесту' 
+    test_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест!"
+    answers:
+      edit:
+        header: 'Редактировать ответ'
+      new: 
+        header: "Новый ответ"
+      show:
+        header: 'Вопрос'
+
+  global_buttons:
+    logout: 'Выход'
+    back: "Назад"
+    show: "Показать"
+    edit: "Редактировать"
+    delete: "Удалить"
+    warning: "Вы уверены?"
+    new: 'Новый тест'
+    start: 'Начать'
+    enter: "Войти"
+    signup: "Регистрация"
+    email: 'Электронная почта'
+    password: 'Пароль'
+    password_confirmation: 'Подтверждение пароля'
+    first_name: "Имя"
+    last_name: "Фамилия"
+    remember_me: 'Запомнить меня'
+    submit: 'Зарегистрироваться'
+    all_tests: 'Вернуться к тестам'
+    next: 'Следущий'
