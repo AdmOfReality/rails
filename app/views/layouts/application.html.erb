@@ -2,19 +2,20 @@
 <html>
   <head>
     <title>RailsExercise</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
-  <body>
-
-    <%= render "shared/header" %>
-    <%= render "shared/flash" %>
-    <%= yield %>
+  
+  <body class="d-flex flex-column">
+    <%= render "shared/nav" %>
+    <div class="container" style="padding-bottom: 30px;">
+      <%= render "shared/flash" %>
+      <%= yield %>
+    </div>
     <%= render "shared/footer" %>
   </body>
 </html>

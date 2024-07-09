@@ -1,3 +1,3 @@
 <% flash.each do |key, msg| %>
-  <%= content_tag :p, msg, class: "flash #{key}" %>
+  <%= content_tag :p, msg, class: "alert alert-#{flash_bootstrap(key)} mt-3" %>
 <% end %>

@@ -1,15 +1,21 @@
- <h1><%= t('.header') %></h1>
+<h1 align="center"><%= t('.header') %></h1>
+<div class="card border-dark">
+  <div class="card-body">
 
-<table border="44">
-	<tr align="center">
-		<th><%= t('.title') %></th>
-		<th><%= t('.level') %></th>
-		<th><%= t('.category') %></th>
-		<th><%= t('.owner') %></th>
-		<th><%= t('.questions') %></th>
-		<th><%= t('.actions') %></th>
-	</tr>
+		<table class="table table-hover">
+			<thead class ="table-dark">
+				<tr align="center">
+					<th scope="col"><%= t('.title') %></th>
+					<th scope="col"><%= t('.level') %></th>
+					<th scope="col"><%= t('.category') %></th>
+					<th scope="col"><%= t('.owner') %></th>
+					<th scope="col"><%= t('.questions') %></th>
+					<th scope="col"><%= t('.actions') %></th>
+				</tr>
+			</thead>
 
-	<%= render @tests %>
+			<%= render @tests %>
 
-</table>
+		</table>
+	</div>
+</div>

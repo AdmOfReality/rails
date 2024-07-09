@@ -10,10 +10,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column">
     <%= render 'admin/nav' %>
-    <%= render "shared/flash" %>
-    <%= yield %>
+    <div class="container" style="padding-bottom: 30px;">
+      <%= render "shared/flash" %>
+      <%= yield %>
+    </div>
     <%= render "shared/footer" %>
   </body>
 </html>

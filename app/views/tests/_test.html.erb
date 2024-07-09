@@ -1,8 +1,10 @@
-<tr align="center">
-	<td><%= test.title %></td>
-	<td><%= test_level(test) %></td>
-	<td><%= test.category.title %></td>
-	<td><%= test.owner.email %></td>
-	<td><%= test.questions.count %></td>
-	<td><%= button_to t('global_buttons.start'), start_test_path(test) %></td>
-</tr>
+<tbody class="table-group-divider">
+	<tr align="center">
+		<td><%= test.title %></td>
+		<td><%= test_level(test) %></td>
+		<td><%= test.category.title %></td>
+		<td><%= test.owner.email %></td>
+		<td><%= test.questions.count %></td>
+		<td><%= button_to t('global_buttons.start'), start_test_path(test), class: 'btn btn-primary' %></td>
+	</tr>
+</tbody>

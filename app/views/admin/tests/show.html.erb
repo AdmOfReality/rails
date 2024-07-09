@@ -1,21 +1,27 @@
-<h1><strong><%=t('tests.index.title')%></strong></h1>
+<div class="card border-dark">
+  <div class="card-body">
 
-<table border="11">
-	<tr align="center">
-		<th><strong><%=t('tests.index.title')%>:</strong></th>
-		<th><strong><%=t('tests.index.level')%>:</strong></th>
-		<th colspan='2'><strong><%=t('tests.index.actions')%></strong></th>
-	</tr>
-	<tr align="center">
-		<td><%= @test.title %></td>
-		<td><%= @test.level %></td>
-		<td><%= button_to t('global_buttons.edit'), edit_admin_test_path(@test), :method => :get %></td>
-		<td><%= button_to t('global_buttons.back'), admin_tests_path, :method => :get %></td>
-</table>
-
-
-<h1><strong><%= t('.questions')%></strong></h1>
-<ol>
-<%= render partial: 'questions/question', collection: @test.questions %>
-</ol>
-
+		<table class="table table-hover">
+			<thead class ="table-dark">
+				<tr align="center">
+					<th scope="col"><strong><%=t('tests.index.title')%>:</strong></th>
+					<th scope="col"><strong><%=t('tests.index.level')%>:</strong></th>
+					<th scope="col" colspan='3' ><strong><%=t('tests.index.actions')%></strong></th>
+				</tr>
+			</thead>
+				<tbody class="table-group-divider">
+					<tr align="center">
+						<td><%= @test.title %></td>
+						<td><%= @test.level %></td>
+						<td class="col-1"><%= button_to t('global_buttons.edit'), edit_admin_test_path(@test),
+						:method => :get, class: "btn btn-primary" %></td>
+						<td class="col-2"><%= button_to t('global_buttons.new_question'), new_admin_test_question_path(@test), :method => :get, class: "btn btn-primary" %></td>
+						<td class="col-1"><%= button_to t('global_buttons.back'), admin_tests_path,
+						:method => :get, class: "btn btn-primary" %></td>
+					</tr>
+				</tbody>
+		</table>	
+	</div>
+</div>
+<br>		
+<%= render partial: 'admin/questions/question', collection: @test.questions %>
