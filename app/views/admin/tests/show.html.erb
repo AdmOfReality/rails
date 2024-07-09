@@ -10,20 +10,30 @@
 			</thead>
 				<tbody class="table-group-divider">
 					<tr align="center">
-						<td><%= @test.title %></td>
-						<td><%= @test.level %></td>
-						<td class="col-1"><%= button_to t('global_buttons.edit'),
+						<td>
+							<%= @test.title %>
+						</td>
+						<td>
+							<%= @test.level %>
+						</td>
+						<td class="col-1">
+						<%= button_to t('global_buttons.edit'),
 						edit_admin_test_path(@test),
 						:method => :get,
-						class: "btn btn-primary" %></td>
-						<td class="col-2"><%= button_to t('global_buttons.new_question'),
+						class: "btn btn-primary" %>
+						</td>
+						<td class="col-2">
+						<%= button_to t('global_buttons.new_question'),
 						new_admin_test_question_path(@test),
 						:method => :get,
-						class: "btn btn-primary" %></td>
-						<td class="col-1"><%= button_to t('global_buttons.back'),
+						class: "btn btn-primary" %>
+						</td>
+						<td class="col-1">
+						<%= button_to t('global_buttons.back'),
 						admin_tests_path,
 						:method => :get,
-						class: "btn btn-primary" %></td>
+						class: "btn btn-primary" %>
+						</td>
 					</tr>
 				</tbody>
 		</table>	
