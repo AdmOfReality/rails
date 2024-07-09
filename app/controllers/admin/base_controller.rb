@@ -1,5 +1,6 @@
-class Admin::BaseController < ApplicationController
+# frozen_string_literal: true
 
+class Admin::BaseController < ApplicationController
   layout 'admin'
 
   before_action :admin_required!

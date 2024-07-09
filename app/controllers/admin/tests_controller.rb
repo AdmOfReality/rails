@@ -1,6 +1,7 @@
-class Admin::TestsController < Admin::BaseController
+# frozen_string_literal: true
 
-  before_action :find_test, only: %i[ show destroy update edit ]
+class Admin::TestsController < Admin::BaseController
+  before_action :find_test, only: %i[show destroy update edit]
 
   def index
     @tests = Test.all
@@ -45,5 +46,4 @@ class Admin::TestsController < Admin::BaseController
   def test_params
     params.require(:test).permit(:title, :level, :category_id)
   end
-
 end

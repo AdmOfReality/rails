@@ -1,5 +1,6 @@
-class TestPassage < ApplicationRecord
+# frozen_string_literal: true
 
+class TestPassage < ApplicationRecord
   SUCCESS_PERCENT = 85
 
   belongs_to :user
@@ -14,10 +15,7 @@ class TestPassage < ApplicationRecord
   end
 
   def accept!(answer_ids)
-    if correct_answer?(answer_ids)
-      self.correct_questions += 1
-    end
-
+    self.correct_questions += 1 if correct_answer?(answer_ids)
 
     save!
   end
@@ -48,7 +46,7 @@ class TestPassage < ApplicationRecord
     correct_answers_count = correct_answers.count
 
     (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
-    correct_answers_count == answer_ids.count
+      correct_answers_count == answer_ids.count
   end
 
   def correct_answers
@@ -58,5 +56,4 @@ class TestPassage < ApplicationRecord
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
   end
-
 end
