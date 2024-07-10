@@ -84,4 +84,6 @@ gem 'bootstrap', '~> 5.3'
 
 gem 'jquery-rails', '~> 4.6'
 
-gem "rubocop", "~> 1.64"
+gem "rubocop"
+
+gem "rubocop-rails"

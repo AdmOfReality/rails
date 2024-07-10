@@ -1,0 +1,16 @@
+require: rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 3.2
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Lint/UselessAssignment:
+  Enabled: false
