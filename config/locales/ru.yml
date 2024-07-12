@@ -65,7 +65,9 @@ ru:
     show:
       header: "Прохождение теста: %{title}"
       question: "Вопрос %{number} из %{size}"
-
+    gist:
+      success: 'Gist успешно сохранен'
+      failure: 'Во время сохранения gist произошла ошибка'
 
   admin:
     nav:

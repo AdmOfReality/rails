@@ -54,6 +54,9 @@ en:
     show:
       header: "Passing the test: %{title}"
       question: "Question %{number} from %{size}"
+    gist:
+      success: 'Gist was successfully saved'
+      failure: 'An error occurred while saving the gist'
 
   admin:
     nav:

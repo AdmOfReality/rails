@@ -87,3 +87,5 @@ gem 'jquery-rails', '~> 4.6'
 gem 'rubocop'
 
 gem 'rubocop-rails'
+
+gem "faraday", "~> 2.10"
