@@ -1,6 +1,10 @@
 ru:
   hello: "Привет мир"
 
+  services:
+    label:
+      description: "Вопрос о %{title} из RailsApp"
+
   helpers:
     submit:
       test:

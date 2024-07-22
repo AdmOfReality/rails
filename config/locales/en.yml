@@ -1,6 +1,9 @@
 en:
   hello: "Hello world"
 
+  services:
+    gist_params: "A question about %{@test.title} fron RailsApp"
+
   helpers:
     submit:
       test:
