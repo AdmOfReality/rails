@@ -88,6 +88,7 @@ en:
       subject: "You just completed the test!"
 
   global_buttons:
+    new_question: "New question"
     logout: 'Logout'
     back: 'Back'
     new: 'New test'
@@ -96,6 +97,7 @@ en:
     delete: "Delete"
     warning: "Are you sure?"
     signup: "Sign up"
+    login: 'Log in'
     enter: "Enter"
     all_tests: "Back to all tests"
     next: 'Next'

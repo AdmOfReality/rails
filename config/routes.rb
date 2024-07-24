@@ -1,9 +1,10 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
+Rails.application.routes.draw do
   root 'tests#index'
 
   devise_for :users, path: :app_users, path_names: { sign_in: :login, sign_out: :logout },
-  controllers: { sessions: 'users/sessions' }
+                     controllers: { sessions: 'users/sessions' }
 
   namespace :admin do
     resources :tests do
@@ -22,5 +23,4 @@ Rails.application.routes.draw do
       get :result
     end
   end
-
 end

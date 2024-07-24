@@ -1,14 +1,21 @@
-<tr align="center">
-	<td><%= test.title %></td>
-	<td><%= test_level(test) %></td>
-	<td><%= test.category.title %></td>
-	<td><%= test.owner.email %></td>
-	<td><%= test.questions.count %></td>
-	<td><%= button_to t('global_buttons.show'), admin_test_path(test), :method => :get %></td>
-	<td><%= button_to t('global_buttons.edit'), edit_admin_test_path(test), :method => :get %></td>
-	<td>
-		<%= button_to t('global_buttons.delete'), admin_test_path(test),
-								:method => :delete,
-								data: {turbo_confirm: t('global_buttons.warning')} %>
-	</td>
-</tr>
+<tbody class="table-group-divider">
+	<tr align="center">
+		<td><%= test.title %></td>
+		<td><%= test_level(test) %></td>
+		<td><%= test.category.title %></td>
+		<td><%= test.owner.email %></td>
+		<td><%= test.questions.count %></td>
+		<td><%= button_to t('global_buttons.show'), admin_test_path(test),
+		 	:method => :get,
+		 	class: 'btn btn-primary' %></td>
+		<td><%= button_to t('global_buttons.edit'), edit_admin_test_path(test),
+		 	:method => :get,
+		 	class: 'btn btn-primary' %></td>
+		<td>
+			<%= button_to t('global_buttons.delete'), admin_test_path(test),
+									:method => :delete,
+									data: {turbo_confirm: t('global_buttons.warning')},
+									class: 'btn btn-primary' %>
+		</td>
+	</tr>
+</tbody>

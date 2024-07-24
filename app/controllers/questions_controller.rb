@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 class QuestionsController < ApplicationController
+  before_action :find_question, only: %i[show]
 
-  before_action :find_question, only: %i[ show ]
-
-rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_questions_not_found
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_questions_not_found
 
   def index
     # @question = @test.questions.all

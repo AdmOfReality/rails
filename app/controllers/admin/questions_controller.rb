@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
 class Admin::QuestionsController < Admin::BaseController
+  before_action :find_question, only: %i[show destroy edit update]
+  before_action :find_test, only: %i[create new]
 
-  before_action :find_question, only: %i[ show destroy edit update ]
-  before_action :find_test, only: %i[ create new ]
-
-rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_questions_not_found
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_questions_not_found
 
   def index
     # @question = @test.questions.all
