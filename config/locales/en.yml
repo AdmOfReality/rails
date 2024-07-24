@@ -65,6 +65,13 @@ en:
     nav:
       header: "Admin's panel"
       welcome: "Welcome"
+      tests: 'Tests'
+    gists:
+      index:
+        header: 'Gist table'
+        author: 'Author'
+        question: 'Question'
+        hash: 'Hash'
     tests:
       create:
         success: "Test successfully created"

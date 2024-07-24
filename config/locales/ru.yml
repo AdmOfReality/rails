@@ -77,6 +77,13 @@ ru:
     nav:
       header: "Административная панель"
       welcome: "Добро пожаловать"
+      tests: 'Тесты'
+    gists:
+      index:
+        header: 'Gist таблица'
+        author: 'Автор'
+        question: 'Вопрос'
+        hash: 'Хэш'
     tests:
       create:
         success: "Тест успешно создан"
