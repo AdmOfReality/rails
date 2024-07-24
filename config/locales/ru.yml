@@ -1,6 +1,10 @@
 ru:
   hello: "Привет мир"
 
+  services:
+    label:
+      description: "Вопрос о %{title} из RailsApp"
+
   helpers:
     submit:
       test:
@@ -65,12 +69,21 @@ ru:
     show:
       header: "Прохождение теста: %{title}"
       question: "Вопрос %{number} из %{size}"
-
+    gist:
+      success: "Gist успешно сохранен. Ваш %{gist}"
+      failure: 'Во время сохранения gist произошла ошибка'
 
   admin:
     nav:
       header: "Административная панель"
       welcome: "Добро пожаловать"
+      tests: 'Тесты'
+    gists:
+      index:
+        header: 'Gist таблица'
+        author: 'Автор'
+        question: 'Вопрос'
+        hash: 'Хэш'
     tests:
       create:
         success: "Тест успешно создан"
