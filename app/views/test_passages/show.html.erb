@@ -5,9 +5,9 @@
     size: @test_passage.test.questions.size) %>
   </p>
 
-  <p>
-  	<b><%= @test_passage.current_question.body %></b>
-  </p>
+  <b>
+  	<%= @test_passage.current_question.body %>
+  </b>
 </div>
 <%= form_with url: test_passage_path(@test_passage), html: { class: 'form-check' }, local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -16,8 +16,6 @@
       <%= b.label class: 'form-check-label' %>
     </div>
     <% end %>
-  <br>
-  <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage),
-    data: { turbo_method: :post }, class: 'btn btn-primary' %></p>
+
   <p><%= form.submit t('global_buttons.next'), class: 'btn btn-primary' %></p>
 <% end %>

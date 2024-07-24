@@ -1,9 +1,6 @@
 en:
   hello: "Hello world"
 
-  services:
-    gist_params: "A question about %{@test.title} fron RailsApp"
-
   helpers:
     submit:
       test:
@@ -57,21 +54,11 @@ en:
     show:
       header: "Passing the test: %{title}"
       question: "Question %{number} from %{size}"
-    gist:
-      success: "Gist was successfully saved. Open your %{gist}"
-      failure: 'An error occurred while saving the gist'
 
   admin:
     nav:
       header: "Admin's panel"
       welcome: "Welcome"
-      tests: 'Tests'
-    gists:
-      index:
-        header: 'Gist table'
-        author: 'Author'
-        question: 'Question'
-        hash: 'Hash'
     tests:
       create:
         success: "Test successfully created"

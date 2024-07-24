@@ -87,9 +87,3 @@ gem 'jquery-rails', '~> 4.6'
 gem 'rubocop'
 
 gem 'rubocop-rails'
-
-gem 'faraday', '~> 2.10'
-
-gem 'octokit', '~> 9.1'
-
-gem 'dotenv-rails', '~> 3.1'

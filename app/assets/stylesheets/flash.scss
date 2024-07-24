@@ -1,0 +1,18 @@
+.flash {
+	border: 2px solid;
+	padding: 10px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.flash.alert {
+	border-color: #ef2727;
+}
+
+.flash.success {
+  border-color: #22bb33;
+}
+
+.flash.notice {
+  border-color: #3c85e0;
+}
