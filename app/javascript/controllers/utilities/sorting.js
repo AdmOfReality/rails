@@ -2,7 +2,9 @@
 document.addEventListener('turbo:load', function() {
     var control = document.querySelector('.sort-by-title');
 
-    console.log(control);
+    control.addEventListener('click', function() {
+    	alert('Click');
+    })
 });
 
 export default {
