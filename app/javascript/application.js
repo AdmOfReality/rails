@@ -3,3 +3,6 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "popper"
 import "bootstrap"
+import sorting from 'utilities/sorting';
+
+
