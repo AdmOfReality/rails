@@ -1,21 +1,22 @@
 <h1 align="center"><%= t('.header') %></h1>
 <div class="card border-dark">
   <div class="card-body">
-
-		<table class="table table-hover">
-			<thead class ="table-dark">
+		<table class="table">
 				<tr align="center">
-					<th scope="col"><%= t('.title') %></th>
+					<th class="sort-by-title pointer" scope="col">
+						<%= t('.title') %>
+	      		<%= octicon 'arrow-up', class: 'octicon-arrow-up hide' %>
+	      		<%= octicon 'arrow-down', class: 'octicon-arrow-down hide' %>
+	      	</th>
 					<th scope="col"><%= t('.level') %></th>
 					<th scope="col"><%= t('.category') %></th>
 					<th scope="col"><%= t('.owner') %></th>
 					<th scope="col"><%= t('.questions') %></th>
 					<th scope="col"><%= t('.actions') %></th>
 				</tr>
-			</thead>
-
-			<%= render @tests %>
-
+			<tbody class="table-group-divider">
+				<%= render @tests %>
+			</tbody>
 		</table>
 	</div>
 </div>
