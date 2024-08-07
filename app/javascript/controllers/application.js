@@ -9,11 +9,3 @@ window.Stimulus   = application
 export { application }
 
 import { Turbo } from "@hotwired/turbo-rails";
-
-// Импорт модуля sorting
-import sorting from 'utilities/sorting';
-
-// Использование модуля sorting при загрузке страницы
-document.addEventListener('turbo:load', function() {
-    sorting.init();
-});
