@@ -7,13 +7,12 @@ Rails.application.routes.draw do
                      controllers: { sessions: 'users/sessions' }
 
   namespace :admin do
-    get 'gists/index'
     resources :tests do
       resources :questions, shallow: true, exсept: :index do
         resources :answers, shallow: true, exсept: :index
       end
-      resources :gists, only: [:index]
     end
+    resources :gists, only: [:index]
   end
 
   resources :tests, only: :index do

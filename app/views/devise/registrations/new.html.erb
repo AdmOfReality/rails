@@ -19,6 +19,10 @@
   <div class="field">
     <%= f.label :password_confirmation, t('global_buttons.password_confirmation') %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <span id="password_match_icon"
+        data-check-icon='<%= octicon("check", class: "green") %>'
+        data-x-icon='<%= octicon("x", class: "red") %>'>
+    </span>
   </div>
 
   <div class="field">
