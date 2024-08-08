@@ -16,6 +16,7 @@ import "./controllers"; // относительный путь
 import "popper";
 import "bootstrap";
 import "./utilities/sorting"; // относительный путь
+import "./utilities/password_match"
 
 // Stimulus application configuration
 const application = Application.start();
