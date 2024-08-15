@@ -1,16 +1,22 @@
-<tr align="center">
-	<td><%= test.title %></td>
-	<td><%= test_level(test) %></td>
-	<td><%= test.category.title %></td>
-	<td><%= test.owner.email %></td>
-	<td><%= test.questions.count %></td>
-	<td><%= button_to t('global_buttons.show'), admin_test_path(test),
+<tr>
+	<td class="align-middle">
+		<%= content_tag :span, test.title, class: 'test-title', data: { test_id: test.id } %>
+		<%= render 'form_inline', test: test == @test ? @test : test%>
+	</td>
+	<td class="align-middle"><%= test_level(test) %></td>
+	<td class="align-middle"><%= test.category.title %></td>
+	<td class="align-middle"><%= test.owner.email %></td>
+	<td class="align-middle"><%= test.questions.count %></td>
+	<td class="align-middle"><%= button_to t('global_buttons.show'), admin_test_path(test),
 	 	:method => :get,
 	 	class: 'btn btn-primary' %></td>
-	<td><%= button_to t('global_buttons.edit'), edit_admin_test_path(test),
-	 	:method => :get,
-	 	class: 'btn btn-primary' %></td>
-	<td>
+	<td class="align-middle">
+								<%= link_to t('global_buttons.edit'),
+								edit_admin_test_path(test),
+							 	data: { test_id: test.id },
+							 	class: 'form-inline-link' %>
+	</td>
+	<td class="align-middle">
 		<%= button_to t('global_buttons.delete'), admin_test_path(test),
 								:method => :delete,
 								data: {turbo_confirm: t('global_buttons.warning')},

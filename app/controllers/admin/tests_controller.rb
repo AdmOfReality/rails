@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
 class Admin::TestsController < Admin::BaseController
-  before_action :find_test, only: %i[show destroy update edit]
+  before_action :find_tests, only: %i[index update_inline]
+  before_action :find_test, only: %i[show destroy update edit update_inline]
 
-  def index
-    @tests = Test.all
-  end
+  def index; end
 
   def new
     @test = Test.new
@@ -24,9 +23,17 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      redirect_to admin_test_path
+      redirect_to admin_tests_path
     else
       render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def update_inline
+    if @test.update(test_params)
+      redirect_to admin_tests_path
+    else
+      render :index, status: :unprocessable_entity
     end
   end
 
@@ -38,6 +45,10 @@ class Admin::TestsController < Admin::BaseController
   def show; end
 
   private
+
+  def find_tests
+    @tests = Test.all
+  end
 
   def find_test
     @test = Test.find(params[:id])

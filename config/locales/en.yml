@@ -84,6 +84,8 @@ en:
         questions: 'Count of questions'
         actions: 'Actions'
         owner: 'Owner'
+      form_inline:
+        submit: 'OK'
       edit:
         header: 'Edit %{title}'
       new:
