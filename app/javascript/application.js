@@ -12,6 +12,7 @@ import "bootstrap";
 import "./utilities/sorting"; // относительный путь
 import "./utilities/password_match"
 import "./utilities/form_inline"
+import "./utilities/progress_bar"
 
 // Stimulus application configuration
 const application = Application.start();

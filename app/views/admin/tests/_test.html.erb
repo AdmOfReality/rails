@@ -7,9 +7,12 @@
 	<td class="align-middle"><%= test.category.title %></td>
 	<td class="align-middle"><%= test.owner.email %></td>
 	<td class="align-middle"><%= test.questions.count %></td>
-	<td class="align-middle"><%= button_to t('global_buttons.show'), admin_test_path(test),
-	 	:method => :get,
-	 	class: 'btn btn-primary' %></td>
+	<td class="align-middle">
+								<%= button_to t('global_buttons.show'),
+								admin_test_path(test),
+	 							:method => :get,
+	 							class: 'btn btn-primary' %>
+	</td>
 	<td class="align-middle">
 								<%= link_to t('global_buttons.edit'),
 								edit_admin_test_path(test),

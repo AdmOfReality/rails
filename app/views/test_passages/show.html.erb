@@ -1,4 +1,8 @@
 <div class="container">
+  <div id="progress-bar-container">
+    <div id="progress-bar" data-progress="<%= (@test_passage.current_question_number.to_f / @test_passage.test.questions.size * 100).round %>"></div>
+  </div>
+
   <h2><%= t('.header', title: @test_passage.test.title) %></h2>
   <p>
     <%= t('.question', number: @test_passage.current_question_number,
@@ -6,16 +10,17 @@
   </p>
 
   <p>
-  	<b><%= @test_passage.current_question.body %></b>
+    <b><%= @test_passage.current_question.body %></b>
   </p>
 </div>
+
 <%= form_with url: test_passage_path(@test_passage), html: { class: 'form-check' }, local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
     <div class="form-check">
       <%= b.check_box class: 'form-check-input', id: "answer_ids_#{b.object.id}" %>
       <%= b.label class: 'form-check-label' %>
     </div>
-    <% end %>
+  <% end %>
   <br>
   <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage),
     data: { turbo_method: :post }, class: 'btn btn-primary' %></p>
