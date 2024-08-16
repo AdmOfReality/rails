@@ -1,7 +1,9 @@
 <h1 align="center"><%= t('.header') %></h1>
 
+<%= render 'shared/errors', resource: @test %>
+
 <table class="table">
-  <tr align="center">
+  <tr class="align-middle">
     <th class="sort-by-title pointer" scope="col">
       <%= t('.title') %>
       <%= octicon 'arrow-up', class: 'green hide' %>

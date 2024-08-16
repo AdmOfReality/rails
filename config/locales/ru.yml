@@ -101,6 +101,8 @@ ru:
         header: "Создать новый тест" 
       show:
         questions: 'Вопросы к тесту' 
+      form_inline:
+        submit: 'OK'
     test_mailer:
     completed_test:
       subject: "Вы успешно завершили тест!"

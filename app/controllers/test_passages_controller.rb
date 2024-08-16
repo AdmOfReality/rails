@@ -14,7 +14,7 @@ class TestPassagesController < ApplicationController
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     else
-      render :show, status: :unprocessable_entity
+      redirect_to @test_passage
     end
   end
 
