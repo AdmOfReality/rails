@@ -4,7 +4,7 @@
     <% if user_signed_in? %>
       <%= link_to t('admin.nav.header'), admin_tests_path, class: 'navbar-brand' if current_user.is_a?(Admin)%>
       <%= t('shared.header.welcome') %>, <b><%= current_user.email %></b>
-      <%= link_to t('global_buttons.logout'), destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
+      <%= link_to t('global_buttons.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to t('global_buttons.login'), new_session_path(resource_name) %> |
       <%= link_to t('global_buttons.signup'), new_registration_path(resource_name) %>
