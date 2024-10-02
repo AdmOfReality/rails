@@ -62,6 +62,21 @@ en:
       success: "Gist was successfully saved. Open your %{gist}"
       failure: 'An error occurred while saving the gist'
 
+  contacts:
+    create:
+      notice: 'Your message has been sent successfully.'
+      alert: 'Check errors, please!'
+    new:
+      header: 'Contact us'
+      name: 'Your name'
+      email: 'Your email'
+      message: 'Your message'
+      send: 'Send'
+
+  contact_mailer:
+    send_contact_email:
+      form: 'New message with feedback form'
+
   admin:
     nav:
       header: "Admin's panel"

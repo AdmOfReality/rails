@@ -3,6 +3,6 @@ class ContactMailer < ApplicationMailer
 
   def send_contact_email
     @contact = params[:contact]
-    mail(to: 'angrysgr@gmail.com', subject: 'Новое сообщение с формы обратной связи')
+    mail(to: 'angrysgr@gmail.com', subject: t('.form'))
   end
 end

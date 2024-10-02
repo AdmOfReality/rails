@@ -1,8 +1,8 @@
-<h1>Свяжитесь с нами</h1>
+<h1><%= t('.header') %></h1>
 
 <%= form_with model: @contact, url: contact_path, local: true do |form| %>
   <div>
-    <%= form.label :name, 'Ваше имя' %>
+    <%= form.label :name, t('.name') %>
     <%= form.text_field :name %>
     <% if @contact.errors[:name].any? %>
       <div class="error_message">
@@ -12,7 +12,7 @@
   </div>
 
   <div>
-    <%= form.label :email, 'Ваш Email' %>
+    <%= form.label :email, t('.email') %>
     <%= form.email_field :email %>
     <% if @contact.errors[:email].any? %>
       <div class="error_message">
@@ -22,7 +22,7 @@
   </div>
 
   <div>
-    <%= form.label :message, 'Ваше сообщение' %><br>
+    <%= form.label :message, t('.message') %><br>
     <%= form.text_area :message %>
     <% if @contact.errors[:message].any? %>
       <div class="error_message">
@@ -32,6 +32,6 @@
   </div>
 
   <div>
-    <%= form.submit 'Отправить' %>
+    <%= form.submit t('.send') %>
   </div>
 <% end %>

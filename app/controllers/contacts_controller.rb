@@ -7,10 +7,10 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.valid?
       ContactMailer.with(contact: @contact).send_contact_email.deliver_now
-      redirect_to contact_path, notice: 'Ваше сообщение было успешно отправлено.'
+      redirect_to contact_path, notice: t('.notice')
     else
-      flash.now[:alert] = 'Пожалуйста, исправьте ошибки в форме.'
-      render :new
+      flash.now[:alert] = t('.alert')
+      render :new, status: :unprocessable_entity
     end
   end
 
