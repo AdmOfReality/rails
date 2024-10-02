@@ -6,6 +6,6 @@
   </span>
   <span class="navbar-text text-white">
     <%= t('.welcome') %>, <b><%= current_user.email %></b> |
-    <%= link_to t('global_buttons.logout'), destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
+    <%= link_to t('global_buttons.logout'), destroy_user_session_path, data: { turbo_method: :delete } %>
   </span>
 </nav>

@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore **/.DS_Store files
+**/.DS_Store
+
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.erb
@@ -33,3 +36,5 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/config/credentials/production.key

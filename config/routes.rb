@@ -2,6 +2,8 @@
 
 Rails.application.routes.draw do
   root 'tests#index'
+  get 'contact', to: 'contacts#new'
+  post 'contact', to: 'contacts#create'
 
   devise_for :users, path: :app_users, path_names: { sign_in: :login, sign_out: :logout },
                      controllers: { sessions: 'users/sessions' }

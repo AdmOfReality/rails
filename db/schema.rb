@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_22_121146) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_16_092133) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -68,6 +68,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_22_121146) do
     t.bigint "owner_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["owner_id"], name: "index_tests_on_owner_id"
+    t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
   end
 
   create_table "users", force: :cascade do |t|
