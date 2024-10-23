@@ -25,6 +25,8 @@ en:
         other: "%{count} errors detected"
     header:
       welcome: "Welcome"
+    nav:
+      awards: "Awards"
 
   devise:
     registrations:
@@ -61,6 +63,10 @@ en:
     gist:
       success: "Gist was successfully saved. Open your %{gist}"
       failure: 'An error occurred while saving the gist'
+    update:
+      success: "You have been assigned an achievement!!!"
+      failure: "No successful test, no achievements =("
+      badges_awarded: "Earned achievements. %{count}"
 
   contacts:
     create:
@@ -82,6 +88,7 @@ en:
       header: "Admin's panel"
       welcome: "Welcome"
       tests: 'Tests'
+      badge: "The admin panel of the Achievements"
     gists:
       index:
         header: 'Gist table'
@@ -114,9 +121,30 @@ en:
         header: 'New answer'
       show:
         header: 'Question'
-  test_mailer:
-    completed_test:
-      subject: "You just completed the test!"
+    badges:
+      create:
+        success: "Badge successfully created"
+      update:
+        update: "Badge update"
+      destroy:
+        delete: "Badge delete"
+      index:
+        create: "Create new Badge"
+        header: "Managing Achievements"
+        name: "Name"
+        image: "Image"
+        rule: "Rule"
+        action: "Actions"
+      new:
+        header: "Creating new Badge"
+      form:
+        name: "Name"
+        url_image: "URL Image"
+        rule: "Rule"
+        save: "Save"
+    test_mailer:
+      completed_test:
+        subject: "You just completed the test!"
 
   global_buttons:
     new_question: "New question"

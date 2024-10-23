@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   root 'tests#index'
+
   get 'contact', to: 'contacts#new'
   post 'contact', to: 'contacts#create'
 
@@ -12,12 +13,15 @@ Rails.application.routes.draw do
     resources :tests do
       patch :update_inline, on: :member
 
-      resources :questions, shallow: true, exсept: :index do
-        resources :answers, shallow: true, exсept: :index
+      resources :questions, shallow: true, except: :index do
+        resources :answers, shallow: true, except: :index
       end
     end
-    resources :gists, only: [:index]
+    resources :badges
+    resources :gists, only: :index
   end
+
+  resources :badges, only: :index
 
   resources :tests, only: :index do
     post :start, on: :member
