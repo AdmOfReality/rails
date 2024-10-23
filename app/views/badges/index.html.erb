@@ -1,2 +1,19 @@
-<h1>Badges#index</h1>
-<p>Find me in app/views/badges/index.html.erb</p>
+<h1>Все Бэйджи</h1>
+<div class="row">
+  <% @badges.each do |badge| %>
+    <div class="col-md-2 text-center mb-4">
+      <%= badge.name %>
+      <img src="<%= badge.image %>" alt="<%= badge.name %>" class="img-fluid" style="max-width: 60px; max-height: 80px;">
+    </div>
+  <% end %>
+</div>
+
+<h2>Мои Бэйджи</h2>
+<div class="row">
+  <% @user_badges.each do |badge| %>
+    <div class="col-md-2 text-center mb-4">
+      <%= badge.name %>
+      <img src="<%= badge.image %>" alt="<%= badge.name %>" class="img-fluid" style="max-width: 60px; max-height: 80px;">
+    </div>
+  <% end %>
+</div>

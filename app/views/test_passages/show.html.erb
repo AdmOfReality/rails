@@ -22,7 +22,7 @@
     </div>
   <% end %>
   <br>
+  <p><%= form.submit t('global_buttons.next'), class: 'btn btn-primary' %></p>
   <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage),
     data: { turbo_method: :post }, class: 'btn btn-primary' %></p>
-  <p><%= form.submit t('global_buttons.next'), class: 'btn btn-primary' %></p>
 <% end %>

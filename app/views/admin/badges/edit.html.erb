@@ -1,2 +1,5 @@
-<h1>Admin::Badges#edit</h1>
-<p>Find me in app/views/admin/badges/edit.html.erb</p>
+<h1>Редактирование Бэйджа</h1>
+
+<%= render 'form', badge: @badge %>
+
+<%= link_to 'Назад', admin_badges_path %>

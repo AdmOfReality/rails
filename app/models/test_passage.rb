@@ -9,6 +9,7 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
   before_validation :before_validation_set_next_question, on: :update
+  scope :passed, -> { where(success: true) }
 
   def completed?
     current_question.nil?
@@ -16,6 +17,8 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+
+    mark_as_passed if successful?
 
     save!
   end
@@ -32,11 +35,16 @@ class TestPassage < ApplicationRecord
     success_rate >= SUCCESS_PERCENT
   end
 
+  def mark_as_passed
+    self.success = true
+  end
+
   private
 
   def before_validation_set_first_question
-    self.current_question = test.questions.first if test.present?
+    self.current_question = test.questions.first if test.present? && current_question.nil?
   end
+
 
   def before_validation_set_next_question
     self.current_question = next_question if new_record? == false
@@ -54,6 +62,8 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
+    return nil if current_question.nil?
+
     test.questions.order(:id).where('id > ?', current_question.id).first
   end
 end
