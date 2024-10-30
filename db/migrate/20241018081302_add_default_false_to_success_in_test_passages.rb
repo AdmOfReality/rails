@@ -1,5 +1,5 @@
 class AddDefaultFalseToSuccessInTestPassages < ActiveRecord::Migration[7.1]
   def change
-    change_column_default :test_passages, :success, from: nil, to: false
+    change_column_null :test_passages, :success, false
   end
 end

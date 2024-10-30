@@ -27,6 +27,12 @@ en:
       welcome: "Welcome"
     nav:
       awards: "Awards"
+      ror_app: "Main page"
+
+  badges:
+    index:
+      header_all: "All badges"
+      header_my: "My badges"
 
   devise:
     registrations:
@@ -142,6 +148,8 @@ en:
         url_image: "URL Image"
         rule: "Rule"
         save: "Save"
+      edit:
+        header: "Badge edit"
     test_mailer:
       completed_test:
         subject: "You just completed the test!"

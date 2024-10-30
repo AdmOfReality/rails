@@ -3,7 +3,7 @@ class Admin::BadgesController < Admin::BaseController
   before_action :set_badge_rules, only: %i[new edit create update]
 
   def index
-    @badges = Badge.all
+    @badges = Badge.includes(:badge_rule).all
   end
 
   def new

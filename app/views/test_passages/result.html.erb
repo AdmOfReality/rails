@@ -1,9 +1,9 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <% if @test_passage.successful? %>
-  <p><%= t('.success') %> <span class="green"><%= t('.score', score: @test_passage.success_rate.to_i) %></span> %!</p>
+  <p><%= t('.success') %> <span class="green"><%= t('.score', score: @test_passage.current_rate.to_i) %></span> %!</p>
 <% else %>
-  <p><%= t('.fail') %> <span class="red"><%= t('.score', score: @test_passage.success_rate.to_i) %></span> %!</p>
+  <p><%= t('.fail') %> <span class="red"><%= t('.score', score: @test_passage.current_rate.to_i) %></span> %!</p>
 <% end %>
 
 <p>

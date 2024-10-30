@@ -1,4 +1,4 @@
-<h1>Все Бэйджи</h1>
+<h1><%= t('.header_all') %></h1>
 <div class="row">
   <% @badges.each do |badge| %>
     <div class="col-md-2 text-center mb-4">
@@ -8,7 +8,7 @@
   <% end %>
 </div>
 
-<h2>Мои Бэйджи</h2>
+<h2><%= t('.header_my') %></h2>
 <div class="row">
   <% @user_badges.each do |badge| %>
     <div class="col-md-2 text-center mb-4">

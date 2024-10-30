@@ -29,7 +29,12 @@ ru:
       welcome: "Добро пожаловать"
     nav:
       awards: "Награды"
+      ror_app: "Главная страница"
 
+  badges:
+    index:
+      header_all: "Все бейджи"
+      header_my: "Мои бейджи"
 
   devise:
     registrations:
@@ -147,6 +152,8 @@ ru:
         rule: "Правило"
         chooze_rule: "Выберите правило"
         save: "Сохранить"
+      edit:
+        header: "Редактирование Бейджа"
     test_mailer:
     completed_test:
       subject: "Вы успешно завершили тест!"
