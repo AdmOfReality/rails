@@ -16,11 +16,7 @@ class TestPassagesController < ApplicationController
       if @test_passage.successful?
         awarded_badges = Badge.check_and_award_badges(@test_passage)
 
-        flash[:notice] = if awarded_badges.any?
-                           t('.badges_awarded', count: awarded_badges.count)
-                         else
-                           t('.success')
-                         end
+        flash[:notice] = t('.badges_awarded', count: awarded_badges.count) if awarded_badges.any?
       else
         flash[:alert] = t('.failure')
       end
