@@ -27,7 +27,14 @@ ru:
         other: "Обнаружено %{count} ошибки"
     header:
       welcome: "Добро пожаловать"
+    nav:
+      awards: "Награды"
+      ror_app: "Главная страница"
 
+  badges:
+    index:
+      header_all: "Все бейджи"
+      header_my: "Мои бейджи"
 
   devise:
     registrations:
@@ -72,6 +79,10 @@ ru:
     gist:
       success: "Gist успешно сохранен. Ваш %{gist}"
       failure: 'Во время сохранения gist произошла ошибка'
+    update:
+      success: "Вам присвоена ачивка!!!"
+      failure: "Нет успешного теста, нет ачивок =("
+      badges_awarded: "Заработанные ачивки. %{count}"
 
   contacts:
     create:
@@ -93,6 +104,7 @@ ru:
       header: "Административная панель"
       welcome: "Добро пожаловать"
       tests: 'Тесты'
+      badge: "Админка Ачивок"
     gists:
       index:
         header: 'Gist таблица'
@@ -118,6 +130,30 @@ ru:
         questions: 'Вопросы к тесту' 
       form_inline:
         submit: 'OK'
+    badges:
+      create:
+        success: "Бейдж успешо создан"
+      update:
+        update: "Бэйдж обновлён"
+      destroy:
+        delete: "Бейдж удален"
+      index:
+        header: "Управление Ачивками"
+        create: "Создать новый Бейдж"
+        name: "Название"
+        image: "Изображение"
+        rule: "Правило"
+        action: "Действия"
+      new:
+        header: "Создание нового Бейджа"
+      form:
+        name: "Название"
+        url_image: "URL изображения"
+        rule: "Правило"
+        chooze_rule: "Выберите правило"
+        save: "Сохранить"
+      edit:
+        header: "Редактирование Бейджа"
     test_mailer:
     completed_test:
       subject: "Вы успешно завершили тест!"

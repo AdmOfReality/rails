@@ -1,0 +1,19 @@
+<h1><%= t('.header_all') %></h1>
+<div class="row">
+  <% @badges.each do |badge| %>
+    <div class="col-md-2 text-center mb-4">
+      <%= badge.name %>
+      <img src="<%= badge.image %>" alt="<%= badge.name %>" class="img-fluid" style="max-width: 60px; max-height: 80px;">
+    </div>
+  <% end %>
+</div>
+
+<h2><%= t('.header_my') %></h2>
+<div class="row">
+  <% @user_badges.each do |badge| %>
+    <div class="col-md-2 text-center mb-4">
+      <%= badge.name %>
+      <img src="<%= badge.image %>" alt="<%= badge.name %>" class="img-fluid" style="max-width: 60px; max-height: 80px;">
+    </div>
+  <% end %>
+</div>

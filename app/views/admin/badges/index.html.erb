@@ -1,0 +1,31 @@
+<h1><%= t(".header") %></h1>
+
+<%= link_to t('.create'), new_admin_badge_path %>
+<div class="card border-dark">
+  <div class="card-body">
+    <table class="table">
+        <tr align="center">
+          <th scope="col"><%= t(".name") %></th>
+          <th scope="col"><%= t(".image") %></th>
+          <th scope="col"><%= t(".rule") %></th>
+          <th scope="col"><%= t(".action") %></th>
+        </tr>
+      <tbody>
+        <% @badges.each do |badge| %>
+          <tr align="center">
+            <td><%= badge.name %></td>
+            <td><img src="<%= badge.image %>" alt="<%= badge.name %>" style="width: 100px; height: 140px;"></td>
+            <td><%= badge.badge_rule.name %></td>
+            <td>
+              <%= link_to t('global_buttons.edit'), edit_admin_badge_path(badge) %>
+              <%= button_to t('global_buttons.delete'),
+              admin_badge_path(badge),
+              method: :delete, data: { turbo_confirm: t('global_buttons.warning') } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
