@@ -69,11 +69,13 @@ ru:
   
   test_passages:
     result:
-      header: "Тест %{title} успешно завершён!"
+      header: "Тест %{title} завершён!"
       success: "Отлично! Ваш рейтинг составил"
       score: "%{score}"
       fail: "Нужно повторить материал =( Ваш рейтинг составил"
+      timer_false: "Время истекло! Тест завершен неуспешно"
     show:
+      timer_message: "Оставшееся время: %{minutes} мин %{seconds} сек"
       header: "Прохождение теста: %{title}"
       question: "Вопрос %{number} из %{size}"
     gist:

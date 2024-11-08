@@ -6,13 +6,14 @@ import { Application } from "@hotwired/stimulus";
 import "./controllers"; // относительный путь
 
 // Import other libraries
-import "jquery"
+import "jquery";
 import "popper";
 import "bootstrap";
 import "./utilities/sorting"; // относительный путь
-import "./utilities/password_match"
-import "./utilities/form_inline"
-import "./utilities/progress_bar"
+import "./utilities/password_match";
+import "./utilities/form_inline";
+import "./utilities/progress_bar";
+import "./utilities/timer";
 
 // Stimulus application configuration
 const application = Application.start();

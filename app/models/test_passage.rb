@@ -12,13 +12,13 @@ class TestPassage < ApplicationRecord
   scope :passed, -> { where(success: true) }
 
   def completed?
-    current_question.nil?
+    current_question.nil? || timed_out?
   end
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
 
-    self.success = true if successful?
+    self.success = successful? && !timed_out?
 
     save!
   end
@@ -34,6 +34,19 @@ class TestPassage < ApplicationRecord
   def successful?
     current_rate >= SUCCESS_PERCENT
   end
+
+  def time_left
+    return nil unless test.duration > 0
+
+    elapsed_time = Time.current.to_i - created_at.to_i
+    remaining_time = test.duration * 60 - elapsed_time
+    remaining_time.positive? ? remaining_time : 0
+  end
+
+  def timed_out?
+    time_left.zero?
+  end
+
 
   private
 
