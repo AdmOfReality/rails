@@ -59,11 +59,13 @@ en:
 
   test_passages:
     result:
-      header: "The %{title} test was successfully complete!"
+      header: "The %{title} was complete!"
       success: "Great! Your score is"
       score: "%{score}"
       fail: "You need to review the material =( Your rating is"
+      timer_false: "Time is up! The test was not completed successfully"
     show:
+      timer_message: "Time left: %{minutes} min %{seconds} sec"
       header: "Passing the test: %{title}"
       question: "Question %{number} from %{size}"
     gist:

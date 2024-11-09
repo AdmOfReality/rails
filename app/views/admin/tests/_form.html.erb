@@ -16,6 +16,11 @@
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p>
 
+  <p>
+    <%= form.label :duration, "Duration (minutes)" %><br>
+    <%= form.number_field :duration, step: 1, min: 0 %>
+  </p>
+
   <p><%= form.submit %></p>
 
 <% end %>
